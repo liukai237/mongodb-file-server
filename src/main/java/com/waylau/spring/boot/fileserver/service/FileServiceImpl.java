@@ -1,7 +1,7 @@
 package com.waylau.spring.boot.fileserver.service;
 
-import java.util.List;
-
+import com.waylau.spring.boot.fileserver.domain.StorageFile;
+import com.waylau.spring.boot.fileserver.repository.FileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -10,8 +10,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
-import com.waylau.spring.boot.fileserver.domain.File;
-import com.waylau.spring.boot.fileserver.repository.FileRepository;
+import java.util.List;
 
 /**
  * File 服务.
@@ -26,7 +25,7 @@ public class FileServiceImpl implements FileService {
 	public FileRepository fileRepository;
 
 	@Override
-	public File saveFile(File file) {
+	public StorageFile saveFile(StorageFile file) {
 		return fileRepository.save(file);
 	}
 
@@ -36,14 +35,14 @@ public class FileServiceImpl implements FileService {
 	}
 
 	@Override
-	public File getFileById(String id) {
+	public StorageFile getFileById(String id) {
 		return fileRepository.findOne(id);
 	}
 
 	@Override
-	public List<File> listFilesByPage(int pageIndex, int pageSize) {
-		Page<File> page = null;
-		List<File> list = null;
+	public List<StorageFile> listFilesByPage(int pageIndex, int pageSize) {
+		Page<StorageFile> page = null;
+		List<StorageFile> list = null;
 		
 		Sort sort = new Sort(Direction.DESC,"uploadDate"); 
 		Pageable pageable = new PageRequest(pageIndex, pageSize, sort);

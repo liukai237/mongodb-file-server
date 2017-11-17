@@ -1,0 +1,23 @@
+server:
+  port: 8088
+  tomcat:
+    uri-encoding: UTF-8
+  address: localhost
+
+spring:
+  application:
+    name: mongo-file-server
+  jackson:
+    default-property-inclusion: non_null
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  thymeleaf:
+        prefix: classpath:/templates/
+        encoding: UTF-8
+        cache: false
+#  data:
+#    mongodb:
+#      uri: mongodb://localhost:27017/test

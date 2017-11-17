@@ -1,18 +1,15 @@
 package com.waylau.spring.boot.fileserver.domain;
 
-import java.util.Date;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 /**
  * File 文档类.
- * 
- * @since 1.0.0 2017年3月28日
- * @author <a href="https://waylau.com">Way Lau</a> 
  */
 @Document
-public class File {
+public class StorageFile {
 	@Id  // 主键
 	private String id;
     private String name; // 文件名称
@@ -103,10 +100,10 @@ public class File {
 	}
 
     
-    protected File() {
+    protected StorageFile() {
     }
     
-    public File(String name, String contentType, long size,byte[] content) {
+    public StorageFile(String name, String contentType, long size, byte[] content) {
     	this.name = name;
     	this.contentType = contentType;
     	this.size = size;
@@ -122,7 +119,7 @@ public class File {
         if (object == null || getClass() != object.getClass()) {
             return false;
         }
-        File fileInfo = (File) object;
+        StorageFile fileInfo = (StorageFile) object;
         return java.util.Objects.equals(size, fileInfo.size)
                 && java.util.Objects.equals(name, fileInfo.name)
                 && java.util.Objects.equals(contentType, fileInfo.contentType)
