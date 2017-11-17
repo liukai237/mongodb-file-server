@@ -6,8 +6,8 @@ It's using some very popular technology like:
 
 * MongoDB 3.4.4
 * Spring Boot 1.5.3.RELEASE
-* Thymeleaf 3.0.3.RELEASE
-* Thymeleaf Layout Dialect 2.2.0
+* Thymeleaf 3.0.9.RELEASE
+* Thymeleaf Layout Dialect 2.2.2
 * Embedded MongoDB 2.0.0
 * Gradle 3.5
 
@@ -49,7 +49,7 @@ $ git clone https://github.com/waylau/mongodb-file-server.git
 $ gradlew bootRun
 ```
 
-then, you can visit the application at <http://localhost:8081>.
+then, you can visit the application at <http://localhost:8088>.
 
 ## Configuration
 
@@ -90,24 +90,6 @@ dependencies {
 }
 ```
 
-## Detail
+## THX
 
-See detail <https://waylau.com/mogodb-file-server-with-spring-boot>.
-
-## Contact 联系作者
-
-* Blog: [waylau.com](https://waylau.com)
-* Gmail: [waylau521(at)gmail.com](mailto:waylau521@gmail.com)
-* Weibo: [waylau521](http://weibo.com/waylau521)
-* Twitter: [waylau521](https://twitter.com/waylau521)
-* Github : [waylau](https://github.com/waylau)
-
-## Donate 捐赠
-
-Support me!
-
-感谢您对老卫[开源工作](https://github.com/waylau)的支持!
-
-![开源捐赠](https://waylau.com/images/showmethemoney-sm.jpg)
-
-捐赠所得所有款项将用于开源事业！
+Fork from https://github.com/waylau/mongodb-file-server
